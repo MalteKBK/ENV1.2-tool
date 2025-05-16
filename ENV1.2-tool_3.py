@@ -63,15 +63,8 @@ if query:
             st.write(f"**Materiale:** {match['Materiale']}")
             st.write(f"**Producent:** {match['Producent']}")
             st.write(f"**Indikator:** {match['Indikator']}")
+            st.write(f"**Opnået kriterie:** {match['kvalitetskrav']}")
             st.write(f"**Score:** {match['Score']}%")
-            if match['Kvalitetskrav']:
-                st.write("**Kvalitetskrav:**")
-                for k, v in match['Kvalitetskrav'].items():
-                    st.write(f"- {k}: {v}")
-            if match['Dokumentation']:
-                st.write("**Dokumentation:**")
-                for k, v in match['Dokumentation'].items():
-                    st.write(f"- {k}: {v}")
-            st.write("---")
+
     else:
         st.write("Ingen resultater fundet.")
