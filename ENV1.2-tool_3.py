@@ -42,7 +42,7 @@ if query:
                 if indikator:
                     krav_row = krav_df[krav_df['Indikator'] == indikator]
                     if not krav_row.empty:
-                        kvalitetskrav = {f'Kvalitetstrin_{i}': krav_row.iloc[0][f'Kvalitetstrin_{i}'] for i in range(1, 5)}
+                        kvalitetskrav = {f'Opnået kriterie_{i}': krav_row.iloc[0][f'Opnået kriterie_{i}'] for i in range(1, 5)}
                         dokumentation = {f'Dokumentation_{i}': krav_row.iloc[0][f'Dokumentation_{i}'] for i in range(1, 5)}
                 
                 results.append({
